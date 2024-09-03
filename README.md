@@ -77,7 +77,6 @@ create table user (
     u_num varchar(45) not null ,
     u_question varchar(100) not null ,
     u_birth varchar(45) not null ,
-
     primary key (u_id)
 );
 
@@ -86,21 +85,18 @@ create table cash (
     c_seqno int auto_increment,
     c_user varchar(45) unique not null ,
     c_cash int default 0,
-
     primary key(c_seqno)
 );
 
 create table cate (
     ct_seqno int auto_increment,
     ct_name varchar(45) not null,
-
-        primary key(ct_seqno)
+    primary key(ct_seqno)
 );
 
 create table keyword (
     k_seqno int auto_increment,
     k_title varchar(45),
-    
     primary key(k_seqno)
 );
 
@@ -117,7 +113,6 @@ create table article (
     a_s_date date not null ,
     a_e_date date,
     a_time varchar(30) not null,
-
     primary key (a_seqno)
 );
 
@@ -125,7 +120,6 @@ create table a_date (
     ad_seqno int auto_increment,
     ad_a_seqno int,
     ad_date date not null ,
-
     primary key (ad_seqno)
 );
 
@@ -133,7 +127,6 @@ create table a_time(
     at_seqno int auto_increment,
     at_d_seqno int,
     at_time time not null ,
-
     primary key (at_seqno)
 );
 
@@ -143,7 +136,6 @@ create table seat (
     s_t_seqno int,
     s_seat varchar(45) not null,
     s_value int default 0,
-
     primary key (s_seqno)
 );
 
@@ -153,7 +145,6 @@ create table review (
     r_title varchar(100) not null ,
     r_content text,
     r_article int not null,
-
     primary key (r_seqno)
 );
 
@@ -165,6 +156,5 @@ create table a_order (
     ao_s_seat1 varchar(45) not null,
     ao_s_seat2 varchar(45),
     ao_user varchar(45) not null,
-
     primary key (ao_seqno)
 );
