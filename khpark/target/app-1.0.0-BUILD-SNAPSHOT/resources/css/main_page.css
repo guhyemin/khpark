@@ -1,0 +1,908 @@
+.main{
+    width: 100%;
+}
+.sec_1{
+    width: 100%;
+}
+.sec_1_top{
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+.sec_1_top a{
+    line-height: 30px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+.sec_1_top a img{
+    width: 36px;
+    height: 36px;
+}
+.sec_1_top a:hover{
+    color: #8e43e7;
+    border-bottom: 2px solid #8e43e7;
+}
+.f_color{
+    color: #8e43e7;    
+}
+.swiper {
+    width: 100%;
+    /*height: 100%;*/
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    /*height: 100%;*/
+    object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+    width: 50px !important; 
+    height: 50px !important;
+    border-radius: 10px !important;
+    overflow: hidden;
+    background-color: white !important;
+    opacity: 0.6 !important;
+}
+
+.swiper-pagination-bullet img{
+    width: 100%;
+    height: 100%;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    border: 1px solid white;
+}
+
+.swiper-wrapper{
+    height: auto !important;
+}
+
+.sec_2{
+    margin: auto;
+    margin-top: 50px;
+    max-width: 1280px;
+}
+.ad_box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.ad_box_link{
+    width: calc((100% - (20px*2))/3);
+    padding-bottom: 9.3%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.ad{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+}
+.ad_1{
+    background: url(../img/ad_banner/ad_1.jpeg)no-repeat center center /cover;
+}
+.ad_2{
+    background: url(../img/ad_banner/ad_2.jpeg)no-repeat center center /cover;    
+}
+.ad_3{
+    background: url(../img/ad_banner/ad_3.jpeg)no-repeat center center /cover;    
+}
+.ad_4{
+    background: url(../img/ad_banner/ad_4.png)no-repeat center center /cover;    
+}
+.ad_5{
+    background: url(../img/ad_banner/ad_5.png)no-repeat center center /cover;    
+}
+.ad_6{
+    background: url(../img/ad_banner/ad_6.png)no-repeat center center /cover;    
+}
+
+
+.sec_3{
+    max-width: 1280px;
+    margin: auto;
+    margin-top: 50px;
+}
+.sec_title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+.genre span:nth-child(1){
+    color: white;
+    background: #8e43e7;
+    border: 1px solid #8e43e7;
+}
+.slide_img{
+    border-radius: 10px;
+}
+.content_txt_box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.content_txt_box span:nth-child(1){
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+.content_txt_box span:nth-child(2){
+    font-size: 16px;
+}
+.content_txt_box span:nth-child(3){
+    font-size: 15px;
+    color: gray;
+}
+.pos_box{
+    position: relative;
+}
+.num_pos{
+    position: absolute;
+    top: 72%;
+    right: 150%;
+    font-size: 52px;
+    color: white;
+    text-shadow: 5px 1px 4px #167ac6;
+}
+.num_pos_9{
+    top: 72%;
+    right: 135%;
+}
+
+.sec_4{
+    max-width: 1280px;
+    margin: auto;
+    margin-top: 50px;
+}
+.open_ticket{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.open_ticket_box{
+    width: calc((100% - (10px*2) )/3);
+    border: 1px solid gray;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+}
+.open_ticket_box a{
+    width: 140px;
+    height: 185px;
+}
+.open_ticket_box img{
+    width: 100%;
+    height: 100%;
+}
+.open_txt{
+    width: calc(100% - 140px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+}
+.open_txt p{
+    margin: 0;
+}
+.open_txt span:nth-child(1){
+    color: red;
+    border: 1px solid gray;
+    font-size: 13px;
+    padding: 3px 5px;
+}
+.open_txt span:nth-child(2){
+    font-size: 17px;
+    font-weight: bold;
+    color: #8e43e7;
+}
+.open_txt span:nth-child(3){
+    font-size: 18px;
+    font-weight: bold;
+}
+.open_txt span:nth-child(4){
+    font-size: 15px;
+    color: gray;
+}
+
+
+
+/* KH파크 영상 */
+.sec_5{
+    max-width: 1280px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.object_box{
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
+}
+object{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.play_genre span:nth-child(1){
+    color: white;
+    background: #8e43e7;
+    border: 1px solid #8e43e7;
+}
+
+
+/* 추천 키워드 */
+.sec_6{
+    max-width: 1280px;
+    margin: auto;
+    margin-top: 50px;
+}
+.recommend_keyword span:nth-child(1){
+    color: white;
+    background: #8e43e7;
+    border: 1px solid #8e43e7;
+}
+
+
+.sec_7{
+    max-width: 1280px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgb(103, 66, 216);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.sec_7 a{
+    margin: auto;
+    width: 410px;
+    height: 112px;
+}
+.sec_7 img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.sec_8{
+    max-width: 1280px;
+    margin: auto;
+    margin-top: 50px;
+}
+.review_box_outer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.review_box{
+    width: calc((100% - 20px)/2);   
+}
+.review_box:hover{
+    cursor: pointer;
+}
+.review_inner{
+    display: flex;
+    gap: 10px;
+    flex-direction: row-reverse;
+}
+.review_img_box{
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.review_img_box img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+.review_txt_box{
+    width: calc(100% - 150px);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.review_txt_inner span:nth-child(1){
+    font-size: 17px;
+    font-weight: 600;
+}
+.review_txt_inner span:nth-child(2){
+    font-weight: bold;
+    font-size: 20px;
+}
+.review_txt_inner span:nth-child(3){
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; 
+    -webkit-box-orient: vertical
+}
+.review_txt_inner{
+    display: flex;
+    flex-direction: column;
+}
+.user_info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.user_box{
+    display: flex;    
+    gap: 5px;
+    align-items: center;
+}
+.star_box{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.user_img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: url(https://tickets.interpark.com/images/profiles/m_2.svg) no-repeat center center /cover;
+}
+.star{
+    width: 70px;
+    height: 13px;
+    background: url(../img/star.png) no-repeat center center /cover;
+}
+.star_score{
+    font-weight: bold;
+}
+.review_popup{
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    width: 500px;
+    transform:  translateX(-50%);
+    border: 5px solid rgb(72, 91, 166);
+    border-radius: 10px;
+    background-color: white;
+    z-index: 999;
+    box-sizing: border-box;
+    padding: 5px 20px;
+    display: none;
+}
+.pop_title{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 25px;
+}
+.pop_img_box{
+    margin: auto;
+    width: 300px;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px gray;
+}
+.pop_txt_box p:nth-child(1){
+    font-size: 20px;
+    text-align: center;
+}
+.pop_txt_box p:nth-child(2){
+    margin-top: 0;
+    text-align: center;
+}
+.pop_scroll_box{
+    width: 100%;
+    height: 200px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px gray;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+.pop_scroll_box p{
+    margin: 0;
+}
+.scroll_title{
+    font-weight: 600;
+    font-size: 20px;
+}
+.scroll_sub_title{
+    font-size: 17px;
+    font-weight: 600;
+}
+.pop_reivew_info{
+    width: auto;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.pop_user_img{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px 1px gray;
+}
+.star_png{
+    width: 95px;
+    height: 25px;
+}
+.pop_scor_box{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.pop_user_name{
+    font-size: 16px;
+    font-weight: bold;
+}
+.pop_scor_box span{
+    font-weight: 600;
+    font-size: 16px;
+}
+.pop_close_btn{
+    width: 200px;
+    height: 45px;
+    margin: 10px auto;
+    margin-top: 20px;
+    color: white;
+    background-color: rgb(72, 91, 166);
+    border-radius: 10px;
+    text-align: center;
+    line-height: 45px;
+    font-weight: bold;
+    font-size: 15px;
+}
+/* 커스텀 */
+.pop_txt_box p:nth-child(3)::-webkit-scrollbar, 
+textarea::-webkit-scrollbar{
+    width: 7px;
+}
+.pop_txt_box p:nth-child(3)::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+    background: rgb(72, 91, 166);
+    border-radius: 5px;
+}
+.pop_txt_box p:nth-child(3)::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track{
+    background: rgba(72, 91, 166, 0.2);
+}
+
+
+/* 중복코드 묶기 */
+.content_txt_box span:nth-child(1),
+.content_txt_box span:nth-child(2),
+.content_txt_box span:nth-child(3),
+.review_txt_inner span:nth-child(1),
+.review_txt_inner span:nth-child(2),
+.user_box span,
+.star_score{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    -webkit-box-orient: vertical
+}
+.genre,
+.play_genre,
+.recommend_keyword{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+.genre_opt,
+.play_opt,
+.keyword_opt{
+    padding: 5px 10px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    font-weight: 600;
+}   
+.genre_opt:hover,
+.play_opt:hover,
+.keyword_opt:hover{
+    cursor: pointer;
+}   
+
+/* 스와이퍼 버튼 커스텀 */
+.swiper_rank_box,
+.keyword_swiper_box,
+.kh_play_box{
+    display: none;
+    position: relative;
+    max-width: calc(100% - 42px);
+    margin: auto;
+}
+.first_block{
+    display: block;
+}
+.swiper-button-next,
+.swiper-button-prev{
+    position: absolute;
+    width: 40px !important;
+    height: 40px !important;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    border: 1px solid gray ;
+}
+div .swiper-button-prev{
+    top: calc(50% - 15.25px);
+    left: 0;
+    transform: translate(-50%, -50%) ;
+}
+div .swiper-button-next{
+    top: calc(50% - 15.25px);
+    right: 0;
+    transform: translate(50%, -50%) ;
+}
+div .kh_btn_R{
+    right: 0;
+    transform: translate(50%, 0) !important;
+}
+div .kh_btn_L{
+    left: 0;
+    transform: translate(-50%, 0) !important;
+}
+.swiper-button-next img,
+.swiper-button-prev img{
+    width: 30%;
+    height: 30%;
+}
+.swiper-button-prev img{
+    transform: rotate(180deg);
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none;    
+}
+object{
+    pointer-events:none;
+}
+.drop{
+    display: none;
+}
+
+
+
+@media screen and (max-width:1024px) {
+    /* 모든 sec padding */
+    .sec{
+        box-sizing: border-box;
+        padding: 0px 10px;
+        margin-top: 30px;
+    }
+    .sec_title{
+        margin: 10px 0px;
+        font-size: 22px;
+    }
+    .main{
+        padding-top: 70px;
+    }
+    /* sec1 반응형 */
+    .sec_1{
+        max-width: 650px;
+        margin: auto;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .sec_1_top{
+        flex-wrap: wrap;
+        gap: 20px;
+        font-size: 15px;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+    .sec_1_top a{
+        width: calc((100% - (30px*5)) /5);
+        border: 1px solid gray;
+        border-radius: 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sec_1_top a:hover{
+        color: black;
+        border-bottom: 1px solid gray;;
+    }
+    .num_pos{
+        font-size: 5.8vw;
+        top: 72%;
+        right: 150%;
+    }
+    .num_pos_9{
+        top: 72%;
+        right: 135%;
+    }
+    .mySwiper{
+        border-radius: 10px;
+    }
+
+    /* sec2 반응형 */
+    /* 중간배너 */
+    .ad_box_link{
+        width: calc((100% - (20px*1))/2);
+        padding-bottom: 13%;
+    }
+
+    /* 키워드 판 */
+    .genre_opt,
+    .play_opt,
+    .keyword_opt{
+        font-size: 15px;
+    }  
+    
+    /* 티켓오픈 */
+    .open_ticket_box{
+        width: calc((100% - (10px*1) )/2);
+    }
+
+    /* 베스트 관람후기 */
+    .review_box{
+        width: calc((100%)/1);   
+    }
+    .review_inner{
+        display: flex;
+        gap: 10px;
+        flex-direction: row-reverse;
+    }
+    .swiper_rank_box,
+    .keyword_swiper_box,
+    .kh_play_box{
+        max-width: 100%;
+    }
+    div .swiper-button-next,
+    div .swiper-button-prev{
+        display: none;
+    }
+    .pop_img_box{
+        width: 200px;
+        height: 300px;   
+    }
+    .pop_scroll_box{
+        height: 150px;
+    }
+    .review_popup {
+        top: 7%;
+        width: 400px;
+    }
+    
+}
+@media screen and (max-width:768px) {
+    .sec_1{
+        box-sizing: border-box;
+        padding: 0px 10px;
+    }
+    .sec_1_top{
+        gap: 20px;
+        font-size: 13px;        
+    }
+    .sec_1_top a{
+        width: calc((100% - (20px*5)) /5);
+    }
+    .num_pos{
+        font-size: 7vw;
+        top: 75%;
+        right: 160%;
+    }
+    .num_pos_9{
+        top: 75%;
+        right: 135%;
+    }
+    /* 키워드 판 */
+    .genre_opt,
+    .play_opt,
+    .keyword_opt{
+        font-size: 13px;
+    }   
+    .genre,
+    .play_genre,
+    .recommend_keyword{
+        gap: 10px;
+    }
+
+    /* 중간배너 */
+    .ad_box{
+        gap: 10px;
+    }
+
+    /* 티켓오픈 */
+    .open_txt{
+        padding: 10px;
+    }
+    .open_txt span:nth-child(1){
+        padding: 1px 3px;
+        font-size: 2.4vw;
+    }
+    .open_txt span:nth-child(2){
+        font-size: 2.8vw;
+    }
+    .open_txt span:nth-child(3){
+        font-size: 2.5vw;
+    }
+    .open_txt span:nth-child(4){
+        font-size: 2vw;
+    }
+
+    /* 베스트 관람후기 */
+    .user_info{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+    }
+    .user_box{
+        display: flex;    
+        gap: 5px;
+        align-items: center;
+    }
+    .star_box{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .review_txt_inner span:nth-child(3){
+        -webkit-line-clamp: 4; 
+    }
+    .pop_close_btn {
+        width: 150px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 17px;
+    }
+    
+    .drop{
+        display: block;
+    }
+    
+}
+@media screen and (max-width:480px) {
+    /* 카테고리 아이콘 크기 */
+    .svg_icon{
+        width: 30px;
+        height: 30px;
+    }
+    .sec_1_top a {
+        line-height: 15px;
+        padding-bottom: 3px;
+    }
+    .sec_1_top a img {
+        width: 29px;
+        height: 29px;
+    }
+    /* 메인 padding */
+    .main{
+        padding-top: 50px;
+    }
+    /* 공통 스와이퍼 텍스트*/
+    .content_txt_box span:nth-child(1){
+        font-size: 4.3vw;
+    }
+    .content_txt_box span:nth-child(2){
+        font-size: 4vw;
+    }
+    .content_txt_box span:nth-child(3){
+        font-size: 3.7vw;
+    }
+    .num_pos{
+        font-size: 10vw;
+        top: 75%;
+        right: 160%;
+    }
+    .num_pos_9{
+        top: 75%;
+        right: 135%;
+    }
+    /* sec margin */
+    .sec{
+        margin-top: 10px;
+    }
+    /* sec 폰트 */
+    .sec_title{
+        font-size: 20px;
+        margin: 10px;
+    }
+    .sec_1_top{
+        gap: 10px;
+        font-size: 2.5vw;        
+    }
+    .sec_1_top a{
+        width: calc((100% - (10px*5)) /5);
+    }
+    /* 키워드 판 */
+    .genre_opt,
+    .play_opt,
+    .keyword_opt{
+        padding: 5px 10px;
+        border: 1px solid gray;
+        border-radius: 15px;
+        font-weight: 600;
+        font-size: 2.5vw;  
+    }   
+    .genre,
+    .play_genre,
+    .recommend_keyword{
+        gap: 5px;
+    }
+    /* 중간 배너 */
+    .ad_box_link{
+        width: calc((100%)/1);
+        padding-bottom: 25%;
+    }
+   /* 티켓오픈 */
+   .open_ticket_box{
+    width: calc((100% - (10px*0) )/1);
+    }
+    .open_txt span:nth-child(1){
+        padding: 3px 5px;
+        font-size: 3.4vw;
+    }
+    .open_txt span:nth-child(2){
+        font-size: 4.5vw;
+    }
+    .open_txt span:nth-child(3){
+        font-size: 4.3vw;
+    }
+    .open_txt span:nth-child(4){
+        font-size: 4vw;
+    }
+    /*베스트 관람후기  */
+    .review_txt_inner span:nth-child(3){
+        -webkit-line-clamp: 3; 
+    }
+    .scroll_title{
+        font-size: 16px;
+    }
+    .scroll_sub_title{
+        font-size: 14px;
+    }
+    .scroll_content{
+        font-size: 12px;
+    }
+    .pop_close_btn {
+        width: 100px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 15px;
+        border-radius: 5px;
+    }
+
+    .review_popup {
+        width: auto;
+    }
+}
+
+
+.rank1{
+    display: flex !important;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>  <!-- 현재 파일이 XML 파일이기 때문에 맨 위에 XML 선언이 온다 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/schema/mybatis-3-mapper.dtd"> <!-- 규칙을 정의한 DTD 선언 -->
+
+
+<mapper namespace="com.bitstudy.app.dao.reviewMapper">
+
+<!--14. 후기 작성 누르고 후기 작성 한 내용 db에 넣어주기-->
+    <insert id="insertReview" parameterType="ReviewDto">
+        insert into review values (null,#{r_writer},#{r_title},#{r_content},#{r_article})
+    </insert>
+
+
+ <!--  16-2.회원 탈퇴 누르면 유저가 예매한 티켓/작성한 후기/캐시 다 없애주기 user 정보 다 없애주기-->
+    <delete id="deleteReview" parameterType="String">
+        delete from review
+        where r_writer = #{r_writer}
+    </delete>
+
+
+
+
+
+
+
+
+</mapper>

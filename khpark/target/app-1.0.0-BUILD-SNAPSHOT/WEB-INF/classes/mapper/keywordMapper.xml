@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>  <!-- 현재 파일이 XML 파일이기 때문에 맨 위에 XML 선언이 온다 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/schema/mybatis-3-mapper.dtd"> <!-- 규칙을 정의한 DTD 선언 -->
+
+
+<mapper namespace="com.bitstudy.app.dao.keywordMapper">
+<!--insert-->
+    <insert id="insertKeyword" parameterType="String">
+        insert into keyword values (null,#{k_title})
+    </insert>
+
+
+<!--키워드 리스트 뽑아오기-->
+    <select id="selectKeyword" resultType="keywordDto">
+        select * from keyword
+    </select>
+
+
+<!--delete-->
+    <delete id="deleteKeyword" parameterType="int">
+        delete from keyword
+        where k_seqno = #{k_seqno}
+    </delete>
+
+
+</mapper>

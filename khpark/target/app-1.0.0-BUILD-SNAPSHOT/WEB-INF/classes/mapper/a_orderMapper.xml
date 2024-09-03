@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>  <!-- 현재 파일이 XML 파일이기 때문에 맨 위에 XML 선언이 온다 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/schema/mybatis-3-mapper.dtd"> <!-- 규칙을 정의한 DTD 선언 -->
+
+
+<mapper namespace="com.bitstudy.app.dao.a_orderMapper">
+
+<!--21. 결제하기 버튼 누르면 좌석,캐시,주문내역,아티클에 오더카운트 db에 보내주기-->
+    <insert id="insertAorder" parameterType="AorderDto">
+        insert into a_order values (null,#{ao_a_seqno},#{ao_d_seqno},#{ao_t_seqno},#{ao_s_seat1},#{ao_s_seat2},#{ao_user})
+    </insert>
+
+
+
+<!--13.유저가 구매한 리스트 뽑아오기 -->
+    <select id="selectAorder" parameterType="String" resultType="OrderListDto">
+
+        select * from (select * from (select * from (select * from a_order where ao_user = #{ao_user}) as O left join article as A on O.ao_a_seqno = A.a_seqno) as AO left join a_date as D on AO.ao_d_seqno = D.ad_seqno) as AOD left join a_time as T on AOD.ao_t_seqno = T.at_seqno
+
+
+<!--        select OADTS.*,SS.s_seat as seat2 from (select OADT.*, s_seat as seat1 from (select OAD.*,at_time from (select OA.*,ad_date from (select * from a_order as O-->
+<!--        left join article as A-->
+<!--        on O.ao_a_seqno = A.a_seqno-->
+<!--        ) as OA-->
+<!--        left join a_date as D-->
+<!--        on OA.ao_d_seqno = D.ad_seqno) as OAD-->
+<!--        left join a_time as T-->
+<!--        on OAD.ao_t_seqno = T.at_seqno) as OADT-->
+<!--        left join seat as S-->
+<!--        on OADT.ao_s_seat1 = S.s_seat) as OADTS-->
+<!--        left join seat as SS-->
+<!--        on OADTS.ao_s_seat2 = SS.s_seat-->
+<!--        where ao_user = #{ao_user}-->
+    </select>
+
+
+<!--  해당 아티클의 해당 유저가 주문한 seat1,2 뽑아오기   -->
+    <select id="selectSeatList" parameterType="map" resultType="SeatListDto">
+        select ao_s_seat1, ao_s_seat2 from a_order
+        where ao_a_seqno = #{ao_a_seqno} and ao_user = #{ao_user}
+    </select>
+<!-- 해당 아티클의 해당 유저가 주문한 개수 뽑아오기 (아티클당 한 유저는 최대 2좌석 구매가능한 조건) -->
+    <select id="selectOrderCount" parameterType="map" resultType="int">
+        select count(*) from a_order
+        where ao_a_seqno = #{ao_a_seqno} and ao_user = #{ao_user}
+    </select>
+
+
+    <!--    방법2 조인으로 하기-->
+    <select id="selectReviewList" parameterType="String" resultType="ArticleDto">
+        select * from a_order as O
+        left join article as A
+        on O.ao_a_seqno = A.a_seqno
+        where ao_user = #{ao_user}
+    </select>
+
+
+
+
+    <!--    16-1. 회원 탈퇴 누르면 유저가 예매한 티켓/작성한 후기/캐시 다 없애주기 user 정보 다 없애주기-->
+    <delete id="deleteAorder" parameterType="String">
+        delete from a_order where ao_user=#{ao_user}
+    </delete>
+
+
+
+
+
+
+
+
+</mapper>
+
+

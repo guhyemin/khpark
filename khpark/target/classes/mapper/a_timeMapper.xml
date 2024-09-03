@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>  <!-- 현재 파일이 XML 파일이기 때문에 맨 위에 XML 선언이 온다 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/schema/mybatis-3-mapper.dtd"> <!-- 규칙을 정의한 DTD 선언 -->
+
+
+<mapper namespace="com.bitstudy.app.dao.a_timeMapper">
+
+<!--insert-->
+    <insert id="insertAtime" parameterType="map">
+        insert into a_time values (null,#{at_d_seqno},#{at_time})
+    </insert>
+
+
+
+<!--19.시간 가져오기 -->
+<select id="selectAtime" parameterType="int" resultType="AtimeDto">
+    select * from a_time
+    where at_d_seqno = #{at_d_seqno}
+</select>
+
+
+<!--  시간 고유번호 가져오기  -->
+<select id="selectAtSeqno" parameterType="map" resultType="int">
+    select at_seqno from a_time
+    where at_d_seqno = #{at_d_seqno} and at_time = #{at_time}
+</select>
+
+
+<!--delete-->
+<delete id="deleteAtime" parameterType="int">
+    delete from a_time where at_seqno=#{at_seqno}
+</delete>
+
+
+
+</mapper>

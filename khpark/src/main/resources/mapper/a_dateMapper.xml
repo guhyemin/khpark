@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>  <!-- 현재 파일이 XML 파일이기 때문에 맨 위에 XML 선언이 온다 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/schema/mybatis-3-mapper.dtd"> <!-- 규칙을 정의한 DTD 선언 -->
+
+
+<mapper namespace="com.bitstudy.app.dao.a_dateMapper">
+
+    <!--insert-->
+    <insert id="insertAdate" parameterType="map">
+        insert into a_date values (null,#{ad_a_seqno},#{ad_date})
+    </insert>
+
+<!--18.날짜 가져오기 -->
+<select id="selectAdate" parameterType="int" resultType="AdateDto">
+    select * from a_date
+    where ad_a_seqno = #{ad_a_seqno}
+</select>
+
+<!--날짜 고유번호가져오기 -->
+<select id="selectAdSeqno" parameterType="map" resultType="int">
+    select ad_seqno from a_date
+    where ad_a_seqno = #{ad_a_seqno} and ad_date = #{ad_date}
+</select>
+
+
+    <!--delete-->
+    <delete id="deleteAdate" parameterType="int">
+        delete from a_date where ad_seqno=#{ad_seqno}
+    </delete>
+
+
+
+
+
+</mapper>

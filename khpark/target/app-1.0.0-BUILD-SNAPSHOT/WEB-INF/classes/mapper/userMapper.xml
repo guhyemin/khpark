@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>  <!-- 현재 파일이 XML 파일이기 때문에 맨 위에 XML 선언이 온다 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/schema/mybatis-3-mapper.dtd"> <!-- 규칙을 정의한 DTD 선언 -->
+
+
+<mapper namespace="com.bitstudy.app.dao.userMapper">
+
+
+<!--4. user정보 insert 로 넣어주기-->
+        <insert id="insertUser" parameterType="UserDto">
+        insert into user values (#{u_id},#{u_pw},#{u_name},#{u_num},#{u_question},#{u_birth})
+    </insert>
+
+
+
+
+<!--1. id만 보내서 user 정보 들고오기
+8. select * from user where id(1번이랑 동일)-->
+    <select id="selectUser" parameterType="String" resultType="UserDto">
+        select * from user
+        where u_id = #{u_id}
+    </select>
+
+
+
+<!--    5.사용자가 적은 값이랑 db에 있는 값이 다 맞으면 id 띄워주기-->
+    <select id="selectIdFind" parameterType="UserDto" resultType="String">
+    select u_id from user
+    where u_name = #{u_name} and u_birth = #{u_birth} and u_num = #{u_num} and u_question = #{u_question}
+    </select>
+
+
+<!--    6.사용자가 적은 값이랑 db에 있는 값이 다 맞으면 pw 띄워주기-->
+    <select id="selectPwFind" parameterType="UserDto" resultType="String">
+        select u_pw from user
+        where u_id = #{u_id} and u_name = #{u_name} and u_birth = #{u_birth} and u_num = #{u_num}
+    </select>
+
+
+    <!--    7.로그인 하고 있는 유저 id,name,birth,cash찍어주기-->
+    <!--C.id 테이블 생성하고 다시 검토,*도 수정, dto에 캐쉬받는 변수 만들기-->
+    <select id="selectMypage" parameterType="String" resultType="UserDto">
+        select * from user as U
+        left join cash as C
+        on U.u_id = C.c_user
+        where u_id = #{u_id}
+    </select>
+
+
+<!--    9.정보 수정 누르면 유저가 입력한 값으로 업데이트-->
+    <update id="updateUser" parameterType="UserDto">
+    update user
+        set u_name = #{u_name},u_birth = #{u_birth} , u_num = #{u_num} , u_question = #{u_question}
+        where u_id=#{u_id}
+    </update>
+
+
+
+<!--    16.회원 탈퇴 누르면 유저가 예매한 티켓/작성한 후기/캐시 다 없애주기 user 정보 다 없애주기-->
+    <delete id="deleteUser" parameterType="String">
+        delete from user where u_id=#{u_id}
+    </delete>
+
+
+</mapper>
+
+
+

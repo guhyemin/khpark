@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>  <!-- 현재 파일이 XML 파일이기 때문에 맨 위에 XML 선언이 온다 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/schema/mybatis-3-mapper.dtd"> <!-- 규칙을 정의한 DTD 선언 -->
+
+
+<mapper namespace="com.bitstudy.app.dao.articleMapper">
+
+<!--insert-->
+<insert id="insertArticle" parameterType="ArticleDto">
+    insert into article
+    values (null,#{a_img},#{a_title},#{a_content},#{a_location},#{a_price},default,#{a_k_seqno},#{a_ct_seqno},#{a_s_date},#{a_e_date},#{a_time})
+</insert>
+
+    <!--    21.결제하기 버튼 누르면 좌석,캐시,주문내역,아티클에 오더카운트 db에 보내주기-->
+    <update id="updateArticle" parameterType="map">
+        update article
+        set a_order_count = #{a_order_count}
+        where a_seqno =#{a_seqno}
+    </update>
+
+    <!-- 현재 오더카운터 가져오기-->
+    <select id="selectOrderCount" parameterType="int" resultType="int">
+        select a_order_count from article
+        where a_seqno  = #{a_seqno}
+    </select>
+
+
+
+
+    <!--    17/23. 아티클 정보 가져오기
+    아티클 리스트(이름,위치,날짜) 뽑아서 보여주기-->
+    <select id="selectArticle" parameterType="int" resultType="ArticleDto">
+        select * from article
+        where a_seqno = #{a_seqno}
+    </select>
+
+
+<!--    22.장르별 랭킹 가져오기-->
+    <select id="selectCateRanking" parameterType="int" resultType="ArticleDto">
+    select * from article
+    where a_ct_seqno = #{a_ct_seqno}
+    order by a_order_count
+    limit 0,10
+    </select>
+
+
+
+<!--26. 티켓오픈 등록된 최신순으로 6개 찍어주기-->
+<select id="selectNew"   resultType="ArticleDto">
+    select * from article
+    order by a_seqno desc
+    limit 0,6
+</select>
+
+<!-- 키워드 관련된 아티클 10개 들고오기    -->
+    <select id="keywordList" parameterType="int" resultType="ArticleDto">
+        select * from article
+        where a_k_seqno = #{a_k_seqno}
+        order by a_order_count
+        limit 0,10
+    </select>
+
+    <!--28. 검색하면 키워드 받아와서 아티클 정보 뽑아주기 -->
+    <!-- 게시글 테이블이랑 카테테이블 조인, 거기에 키워드 조인 -->
+    <select id="selectSearch" parameterType="map" resultType="ArticleDto">
+        select * from (select * from article as A
+        left join cate as C
+        on A.a_ct_seqno = C.ct_seqno) as AC
+        left join keyword as K
+        on AC.a_k_seqno = K.k_seqno
+        where a_title like concat('%',#{keyword},'%') or k_title like concat('%',#{keyword},'%') or ct_name like concat('%',#{keyword},'%')
+        <choose>
+            <when test="option.equals('a_e_date')">
+                order by a_e_date desc
+            </when>
+            <otherwise >
+                order by a_order_count asc
+            </otherwise>
+        </choose>
+        limit #{offset}, 10
+    </select>
+
+    <!-- 검색한 아티클 개수 뽑아오기   -->
+    <select id="searchCount" parameterType="String" resultType="int">
+        select count(*) from (select * from article as A
+        left join cate as C
+        on A.a_ct_seqno = C.ct_seqno) as AC
+        left join keyword as K
+        on AC.a_k_seqno = K.k_seqno
+        where a_title like concat('%',#{keyword},'%') or k_title like concat('%',#{keyword},'%') or ct_name like concat('%',#{keyword},'%')
+    </select>
+
+
+    <!--delete-->
+<delete id="deleteArticle" parameterType="int">
+    delete from article where a_seqno = #{a_seqno}
+</delete>
+
+
+
+
+</mapper>

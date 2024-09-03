@@ -1,0 +1,387 @@
+*{
+    font-family: "Noto Sans KR", sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* 아이디 비번 찾기 팝업 */
+.find_id_popup,
+.find_pw_popup,
+.find_info_popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 270px;
+    transform: translate(-50%, -50%);
+    border: 3px solid rgb(72, 91, 166);
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: white;
+    z-index: 900;
+    display: none;
+}
+.popup_title{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 15px;
+}
+.find_box{
+    margin: auto;
+}
+.popup_input_box{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.answer_box{
+    justify-content: center;
+    gap: 10px;
+}
+.popup_input_box input{
+    width: 70%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid rgb(72, 91, 166);
+    padding: 1px 3px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.question_box{
+    text-align: center;
+    display: flex;
+    margin-bottom: 0;
+    justify-content: center;
+}
+.question{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.popup_input_box input:focus{
+    outline: 1px solid rgb(72, 91, 166);
+}
+.submit_btn_id,
+.submit_btn_pw,
+.close_btn{
+    background-color: rgb(72, 91, 166);
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+}
+.close_btn{
+    margin-top: 5px;
+}
+.close_btn:hover{
+    cursor: pointer;
+}
+.find_info_box{
+    margin: auto;
+    max-width: 250px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.find_info_box button{
+    margin-top: 10px;
+}
+.find_answer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+/* 에러메시지 */
+.error_message_popup{
+    font-weight: 600;
+    color: red;
+    text-align: center;
+    margin: 0px 0px 5px 0px;
+    display: none;
+}
+
+
+
+/* 메인 */
+main{
+    margin-top: 150px;
+    width: 100%;
+}
+.main_inner{
+    position: relative;
+    max-width: 400px;
+    margin: auto;
+}
+.block_pan{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 500;
+    display: none;
+}
+
+.form_outer{
+    margin: auto;
+    margin-top: 50px;
+    width: 100%;
+    border: 3px solid rgb(72, 91, 166);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+.login_box{
+    max-width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    box-sizing: border-box;
+    padding-bottom: 25px;
+}
+/* #8e43e7 */
+/* 로고 */
+.form_logo{
+    color: rgb(72, 91, 166);
+    font-weight: bold;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+}
+.form_logo span:nth-child(2){
+    color: black;
+}
+/* 에러메시지 */
+.error_message{
+    font-weight: 600;
+    color: red;
+}
+/* 아이디 비번 */
+.login_input_box_outer{
+    width: 100%;
+}
+.login_input_box{
+    width: 100%;
+    height: 40px;
+}
+.user_info{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 9px 0px 7px 8px;
+    font-size: 15px;
+    font-weight: 600;
+    background: rgb(250,250,250);
+    border: 1px solid rgb(72, 91, 166);
+    border-radius: 5px;
+}
+.login_input_box_outer .login_input_box:nth-child(2){
+    margin-top: 5px;
+}
+.user_info:focus{
+    outline: 1px solid rgb(72, 91, 166);
+}
+
+/* 자동 로그인 박스 */
+.auto_login_box{
+    width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+}
+
+#auto_login{
+    width: 18px;
+    height: 18px;
+}
+#auto_login:hover,
+label:hover{
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+}
+
+
+/* 로그인 버튼*/
+.submit_btn{
+    background-color: rgb(72, 91, 166);
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+
+
+
+/* 아이디 비밀번호 회원가입 */
+.help_box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+}
+.help_box button{
+    background: none;
+    border: none;
+    padding: 0px 0px 0px 0px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.help_box .open_btn:hover{
+    cursor: pointer;
+}
+/* 로그인 아이콘 박스 */
+.login_icon_box{
+    width: 100%;
+}
+.login_icon_box .login_other:nth-child(2){
+    margin: 5px 0px;
+}
+.login_other{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: red;
+    box-sizing: border-box;
+    padding: 7.5px;
+    font-size: 15px;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+}
+.login_other:hover{
+    cursor: pointer;
+}
+.other_icon{
+    position: absolute;
+    top:7.5px;
+    left: 7.5px;
+    width: 25px;
+    height: 25px;
+}
+.login_icon_box .login_other:nth-child(1){
+    background-color: rgb(247, 225, 17);
+}
+.other_icon_1{
+    background: url("https://mochaclass.com/static/media/icon_kakao.d82e8299.svg") no-repeat center center /contain;
+}
+.login_icon_box .login_other:nth-child(2){
+    background-color: rgb(3, 199, 90);
+}
+.other_icon_2{
+    background: url("https://mochaclass.com/static/media/icon_naver.015656b0.svg") no-repeat center center /cover;
+}
+.login_icon_box .login_other:nth-child(3){
+    background-color: rgba(171, 201, 255, 0.6);
+}
+.other_icon_3{
+    background: url("https://mochaclass.com/static/media/icon_google.934da1ab.svg") no-repeat center center /cover;
+}
+
+
+/* 푸터 변경 */
+footer{
+    max-width: 300px;
+    margin: auto;
+    margin-top: 20px;
+}
+.f_top{
+    width: 100%;
+}
+.f_top_inner{
+    margin: auto;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 14px;
+    gap: 10px;
+}
+.f_title_box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.f_txt_box{
+    margin: 10px auto;
+    margin-bottom: 0;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.f_txt_outer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 19px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.f_txt_outer span{
+    font-size: 13px;
+}
+.f_txt_title{
+    font-weight: bold;
+    font-size: 14px;
+}
+.f_txt_title_box{
+    display: flex;
+}
+.drop:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width:1024px) {
+    main{
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width:768px) {
+    main{
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width:480px) {
+    main{
+        margin-top: 10px;
+    }
+    .form_logo{
+        margin-top: 10px;
+        font-size: 40px;
+    }
+}

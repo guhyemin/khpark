@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>  <!-- 현재 파일이 XML 파일이기 때문에 맨 위에 XML 선언이 온다 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/schema/mybatis-3-mapper.dtd"> <!-- 규칙을 정의한 DTD 선언 -->
+
+
+<mapper namespace="com.bitstudy.app.dao.cashMapper">
+
+
+<!--insert-->
+    <insert id="insertCash" parameterType="String">
+        insert into cash values (null,#{c_user},default)
+    </insert>
+
+<!--10.캐시충전 누르면 현재 캐쉬 찍어주기-->
+    <select id="selectId" parameterType="String" resultType="int">
+        select c_cash from cash
+        where c_user = #{c_user}
+    </select>
+
+
+
+<!--1112. update cash (보유하고 있던 캐시에 추가한 캐시로 업데이트)
+21.1112와 동일-->
+    <update id="updateCash" parameterType="map">
+        update cash
+        set c_cash = #{c_cash}
+        where c_user = #{c_user}
+    </update>
+
+
+
+<!--        16-3. 회원 탈퇴 누르면 유저가 예매한 티켓/작성한 후기/캐시 다 없애주기
+        user 정보 다 없애주기 -->
+    <delete id="deleteId" parameterType="String">
+        delete from cash
+        where c_user = #{c_user}
+    </delete>
+
+
+
+
+
+
+
+
+
+
+</mapper>

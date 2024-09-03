@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/my_page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <title>내정보 페이지</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header_inner">            
+            <a href="./index.html" class="h_logo">
+                <span>KH-</span>
+                <span>PARK</span>
+            </a>
+            <form class="h_search_box" action="#" method="post">
+                <input type="text" class="h_search">
+                <input type="submit" class="search_icon_box">
+            </form>
+            <div class="h_info_box">
+                <a href="./index.html" class="respnsive_block dis_flex">
+                    <div class="header_icon h_icon1"></div>
+                    <span>홈</span>
+                </a>
+                <a href="./login_page.html" class="dis_flex">
+                    <div class="header_icon h_icon2"></div>
+                    <span>로그인</span>
+                </a>
+                <a href="./register_page.html" class="respnsive_none">
+                    <span>회원가입</span>
+                </a>
+                <a href="./my_page.html" class="dis_flex">
+                    <div class="header_icon h_icon3"></div>
+                    <span>내정보</span>
+                </a>
+                <a href="#" class="respnsive_block dis_flex top_btn">
+                    <div class="header_icon h_icon4"></div>
+                    <span>TOP</span>
+                </a>
+            </div>
+
+            <!-- 정보수정 -->
+            <div class="popup popup_1">
+                <a href="./index.html" class="popup_logo">
+                    <span>KH-</span>
+                    <span>PARK</span>
+                </a>
+                <p class="popup_title">정보 수정</p>
+                <!--뭐 변경할지 선택 -->
+                <div class="find_opt_box">
+                    <div class="find_opt">아이디 변경</div>
+                    <div class="find_opt">비밀번호 변경</div>
+                    <div class="find_opt">전화번호 변경</div>
+                    <div class="find_opt">문제 정답 변경</div>
+                    <div class="popup_btn_box">
+                        <button class="close_btn close_popup_update">닫기</button>
+                    </div>
+                </div>
+                <!-- 아이디 변경 -->
+                <form class="update_box_outer" action="#" method="post">
+                    <div class="update_box">
+                        <!-- 현재 아이디 입력 -->
+                        <span>현재 아이디</span>
+                        <input type="text" placeholder="현재 아이디를 입력" class="orign_input">
+                        <span class="error_msg"></span>
+                        <!-- 변경할 아이디 입력 -->
+                        <span>변경할 아이디</span>
+                        <input type="text" placeholder="변경할 아이디를 입력" class="update_input">
+                        <span class="error_msg"></span>
+                        <!-- 버튼 박스 -->
+                        <div class="popup_btn_box">
+                            <input type="submit" class="update_btn" value="변경하기">
+                            <input type="reset" class="prev_btn_update" value="이전으로">
+                            <input type="reset" class="off_close_btn" value="닫기">
+                        </div>
+                    </div>
+                </form>
+                <!-- 비번 변경 -->
+                <form class="update_box_outer" action="#" method="post">
+                    <div class="update_box">
+                        <!-- 현재 비밀번호 입력 -->
+                        <span>현재 비밀번호</span>
+                        <input type="password" placeholder="현재 비밀번호를 입력" class="orign_input">
+                        <span class="error_msg"></span>
+                        <!-- 변경할 비밀번호 입력 -->
+                        <span>변경할 비밀번호</span>
+                        <input type="password" placeholder="변경할 비밀번호를 입력" class="update_input">
+                        <span class="error_msg"></span>
+                        <!-- 비밀번호 확인 -->
+                        <input type="password" placeholder="비밀번호를 한번 더 입력" class="update_input">
+                        <span class="error_msg"></span>
+                        <!-- 버튼 박스 -->
+                        <div class="popup_btn_box">
+                            <input type="submit" class="update_btn" value="변경하기">
+                            <input type="reset" class="prev_btn_update" value="이전으로">
+                            <input type="reset" class="off_close_btn" value="닫기">
+                        </div>
+                    </div>
+                </form>
+                <!-- 전화번호 변경 -->
+                <form class="update_box_outer" action="#" method="post">
+                    <div class="update_box">
+                        <!-- 전화번호 입력 -->
+                        <span>전화번호</span>
+                        <input type="text" placeholder="변경할 전화번호를 입력" class="update_input">
+                        <span class="error_msg"></span>
+                        <!-- 버튼박스 -->
+                        <div class="popup_btn_box">
+                            <input type="submit" class="update_btn" value="변경하기">
+                            <input type="reset" class="prev_btn_update" value="이전으로">
+                            <input type="reset" class="off_close_btn" value="닫기">
+                        </div>
+                    </div>
+                </form>
+                <!-- 문제 답 변경 -->
+                <form class="update_box_outer" action="#" method="post">
+                    <div class="update_box">
+                        <!-- 질문 정답 입력 -->
+                        <span>질문: 초등학생 때 장래희망은?</span>
+                        <input type="text" placeholder="변경할 정답을 입력" class="update_input">
+                        
+                        <span class="error_msg"></span>
+                        <!-- 버튼박스 -->
+                        <div class="popup_btn_box">
+                            <input type="submit" class="update_btn" value="변경하기">
+                            <input type="reset" class="prev_btn_update" value="이전으로">
+                            <input type="reset" class="off_close_btn" value="닫기">
+                        </div>
+                    </div>
+                </form>    
+            </div> 
+            <!-- 포인트충전 -->
+            <form class="popup popup_2" action="#" method="#">
+                <a href="./index.html" class="popup_logo">
+                    <span>KH-</span>
+                    <span>PARK</span>
+                </a>
+                <p class="popup_title">포인트 충전</p>
+                <div class="point_input_box">
+                    <input type="text" class="point_input" readonly value="0">
+                    <span class="point_input_txt">P</span>
+                </div>
+                <div class="point_increment_btn_box">
+                    <div class="add_btn">+ 1만원</div>
+                    <div class="add_btn">+ 3만원</div>
+                    <div class="add_btn">+ 5만원</div>
+                    <div class="add_btn">+ 10만원</div>
+                </div>
+                <div class="popup_btn_box">
+                    <input type="submit" class="submit_btn point_btn" value="충전하기">
+                    <input type="reset" class="close_btn" value="닫기">
+                </div>
+            </form>
+            <!-- 예매내역 -->
+            <div class="popup popup_3">
+                <a href="./index.html" class="popup_logo">
+                    <span>KH-</span>
+                    <span>PARK</span>
+                </a>
+                <p class="popup_title">예매 내역</p>
+                <div class="ticket_area">
+                </div>
+                <div class="popup_btn_box">
+                    <input type="reset" class="close_btn" value="닫기">
+                </div>
+            </div>
+            <!-- 후기작성 -->
+            <form class="popup popup_4 asd" action="#" method="#">
+                <a href="./index.html" class="popup_logo">
+                    <span>KH-</span>
+                    <span>PARK</span>
+                </a>
+                <p class="popup_title">후기작성</p>
+                <div class="review_box">                    
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                        </div>
+                        <div class="swiper-button-next swiper_btn"></div>
+                        <div class="swiper-button-prev swiper_btn"></div>
+                    </div>                    
+                    <div class="popup_btn_box">
+                        <div class="close_btn review_close_btn">닫기</div>
+                    </div>
+                </div>
+            </form>
+            <!-- 임시팝업 -->
+            <div class="popup popup_5">
+                <h1>임시</h1>
+                <div class="popup_btn_box">
+                    <input type="reset" class="close_btn" value="닫기">
+                </div>
+            </div>
+            <!-- 회원 탈퇴 -->
+            <div class="popup popup_6">
+                <a href="./index.html" class="popup_logo">
+                    <span>KH-</span>
+                    <span>PARK</span>
+                </a>
+                <p class="popup_title">회원탈퇴</p>
+                <div class="confirm_txt_box">
+                        <span>회원탈퇴를 원하시면</span>
+                        <span>"회원탈퇴에 동의합니다"</span>
+                        <span>입력해주세요</span>
+                </div>
+                <div class="confirm_btn_box">
+                    <div class="confirm_input_box">
+                        <input type="text" placeholder="회원 탈퇴에 동의합니다" class="delete_confirm_input">
+                    </div>
+                    <div class="popup_btn_box">
+                        <div class="delete_btn">탈퇴하기</div>
+                        <div class="close_btn">닫기</div>
+                    </div>
+                </div>
+            </div>
+            <div class="block_pan"></div>
+    </header>
+    <main class="main">
+        <section class="sec">
+            <p class="sec_title">프로필</p>
+            <div class="info_box_outer">
+                <div class="info_box_L">
+                    <div class="info_box_txt">
+                        <div class="profile_box_inner">
+                            <div class="profile_img_box">
+                                <img src="../img/pro.png" alt="프로필 사진">
+                            </div>
+                            <div class="profile_txt_header">
+                                <p>안녕하세요</p>
+                                <div>
+                                    <span>하승우</span>
+                                    <span> 님</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile_txt_main">
+                            <div class="info_content_box">
+                                <p class="info_title">가입일</p>
+                                <p class="info_content">2024-07-20</p>
+                            </div>
+                            <div class="info_content_box">
+                                <p class="info_title">이름</p>
+                                <p class="info_content">하승우</p>
+                            </div>
+                            <div class="info_content_box">
+                                <p class="info_title">생년월일</p>
+                                <p class="info_content">19990611</p>
+                            </div>
+                            <div class="info_content_box">
+                                <p class="info_title">전화번호</p>
+                                <p class="info_content">010-77477-160</p>
+                            </div>
+                            <div class="info_content_box">
+                                <p class="info_title">현재 포인트</p>
+                                <p class="info_content">100000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="info_box_R">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="f_top">
+            <div class="f_top_inner">
+                <a href="#"><span>회사소개</span></a>
+                <a href="#"><span>이용약관</span></a>
+                <a href="#"><span>개인정보처리방침</span></a>
+                <a href="#"><span>여행약관</span></a>
+                <a href="#"><span>티켓판매안내</span></a>
+                <a href="#"><span>공지사항</span></a>
+                <a href="#"><span>고객센터</span></a>
+            </div>
+        </div>
+        <div class="f_txt_box">
+            <div class="f_txt_outer">
+                <div class="f_txt_title_box">
+                    <span class="f_txt_title">(주)KH-PARK</span>
+                    <span class="drop"> ▼</span>
+                </div>
+                <span class="f_txt">주소 서울 서초구 테헤란로 13</span>
+                <span class="f_txt">사업자등록번호 000-00-00000</span>
+                <span class="f_txt">통신판매업신고 0000-서울강남-00000</span>
+                <span class="f_txt">관광사업증 등록번호 : 제0000-00호</span>
+            </div>
+            <div class="f_txt_outer">
+                <div class="f_txt_title_box">
+                    <span class="f_txt_title">고객센터 </span>
+                    <span class="drop"> ▼</span>
+                </div>
+                <span class="f_txt">투어 0000-0000｜티켓 0000-0000</span>
+                <span class="f_txt">팩스 00-000-0000</span>
+                <span class="f_txt">해외항공 00-0000-0000｜국내항공 00-0000-0000</span>
+                <span class="f_txt">투어 1:1문의｜티켓 1:1문의</span>
+            </div>
+            <div class="f_txt_outer">
+                <div class="f_txt_title_box">
+                    <span class="f_txt_title">전자금융거래 분쟁처리 담당 </span>
+                    <span class="drop"> ▼</span>
+                </div>
+                <span class="f_txt">투어 0000-0000 ｜티켓 0000-0000</span>
+                <span class="f_txt">팩스 00-000-0000｜이메일 aaaaa@naver.com</span>
+                <span class="f_txt">안전보호책임자 aaa@aaa.com</span>
+                <span class="f_txt">개인정보보호책임자 aaa@aaa.com</span>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/my_page.js"></script>
+</body>
+</html>

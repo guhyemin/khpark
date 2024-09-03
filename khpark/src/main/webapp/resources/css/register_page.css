@@ -1,0 +1,184 @@
+*{
+    font-family: "Noto Sans KR", sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* 메인 */
+main{
+    margin-top: 70px;
+    width: 100%;
+}
+
+/* 에러메시지 */
+.error_message{
+    font-weight: 600;
+    color: red;
+    font-size: 15px;
+}
+
+.register_box{
+    max-width: 300px;
+    margin: auto;
+    padding: 10px;
+    border: 3px solid rgb(72, 91, 166);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* box-sizing: border-box; */
+}
+.form_logo{
+    color: rgb(72, 91, 166);
+    font-weight: bold;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+}
+.form_logo span:nth-child(2){
+    color: black;
+}
+.box_title{
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+.register_box_outer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.register_info_box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.user_info{
+    width: 70%;
+    height: 30px;
+    box-sizing: border-box;
+    padding: 9px 0px 7px 8px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid rgb(72, 91, 166);
+    border-radius: 5px;
+}
+.user_info:focus{
+    outline: 1px solid rgb(72, 91, 166);
+}
+.register_info_box p{
+    margin: 0;
+    width: 70%;
+    font-size: 14px;
+    font-weight: 600;
+}
+.register_btn{
+    margin-top: 10px;
+    width: 70%;
+    height: 35px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    color: white;
+    background: rgb(72, 91, 166);
+    border-radius: 5px;
+}
+
+
+/* 푸터 변경 */
+footer{
+    max-width: 300px;
+    margin: auto;
+    margin-top: 20px;
+}
+.f_top{
+    width: 100%;
+}
+.f_top_inner{
+    margin: auto;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 14px;
+    gap: 10px;
+}
+.f_title_box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.f_txt_box{
+    margin: 10px auto;
+    margin-bottom: 0;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.f_txt_outer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 19px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.f_txt_outer span{
+    font-size: 13px;
+}
+.f_txt_title{
+    font-weight: bold;
+    font-size: 14px;
+}
+.f_txt_title_box{
+    display: flex;
+}
+.drop:hover{
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width:1024px) {
+    main{
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width:768px) {
+    main{
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width:480px) {
+    main{
+        margin-top: 20px;
+    }
+    /* 에러메시지 */
+    .error_message{
+        font-weight: 600;
+        color: red;
+        font-size: 13px;
+    }
+    .form_logo{
+        margin-top: 10px;
+        font-size: 40px;
+    }
+}
+

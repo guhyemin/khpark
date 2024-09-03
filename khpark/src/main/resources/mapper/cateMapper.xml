@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>  <!-- 현재 파일이 XML 파일이기 때문에 맨 위에 XML 선언이 온다 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/schema/mybatis-3-mapper.dtd"> <!-- 규칙을 정의한 DTD 선언 -->
+
+
+<mapper namespace="com.bitstudy.app.dao.cateMapper">
+
+    <!--insert-->
+    <insert id="insertCate" parameterType="String">
+        insert into cate values (null,#{ct_name})
+    </insert>
+
+<!--24.전체보기 누르면 카테 리스트 보여주기 -->
+<!--카테이름 받아와서 검색하고 고유번호 보내주기-->
+    <select id="selectCate" parameterType="String" resultType="int">
+        select ct_seqno from  cate
+        where ct_name = #{ct_name}
+    </select>
+
+
+    <!--카테 종류 다 들고오기-->
+    <select id="selectCateAll" resultType="CateDto">
+        select * from cate
+    </select>
+
+
+    <!--delete-->
+    <delete id="deleteCate" parameterType="int">
+        delete from cate
+        where ct_seqno=#{ct_seqno}
+    </delete>
+</mapper>

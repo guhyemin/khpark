@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>  <!-- 현재 파일이 XML 파일이기 때문에 맨 위에 XML 선언이 온다 -->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/schema/mybatis-3-mapper.dtd"> <!-- 규칙을 정의한 DTD 선언 -->
+
+
+<mapper namespace="com.bitstudy.app.dao.seatMapper">
+    <!--insert-->
+    <insert id="insertseat" parameterType="SeatDto">
+        insert into seat values (null,#{s_t_seqno},#{s_seat},default)
+    </insert>
+
+
+<!--    21.결제하기 버튼 누르면 좌석,캐시,주문내역,아티클에 오더카운트 db에 보내주기-->
+    <update id="updateSeat" parameterType="map" >
+        update seat
+        set s_value = 1
+        where s_t_seqno = #{s_t_seqno} and s_seat = #{s_seat}
+    </update>
+
+
+<!--    20.좌석 가져오기-->
+<select id="selectSeat" parameterType="int" resultType="String">
+    select s_seat from seat
+    where s_t_seqno = #{s_t_seqno} and s_value = 1
+</select>
+
+<!--delete-->
+    <delete id="deleteSeat" parameterType="int">
+        delete from seat
+        where s_seqno = #{s_seqno}
+    </delete>
+
+
+
+</mapper>
