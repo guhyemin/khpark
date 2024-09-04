@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=Hello&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Hyemin's%20GitHub%20Profile&descAlignY=51&descAlign=62)
+![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=Hello&fontSize=90&animation=fadeIn&fontAlignY=38&desc=HyeMin's%20GitHub%20Profile&descAlignY=51&descAlign=62)
 
 #  Team_project : Khpark
 ---
@@ -10,7 +10,6 @@
 
 ## 👫 맡은 역활
 + 구혜민(백엔드) : 예매 페이지, 서치 페이지 기능 구현
-
 
 ## 📝 개발언어
 <div style="display:flex; flex-direction:column; align-items:flex-start;">
@@ -49,9 +48,7 @@
 ---
 ## 📌 주요기능
 + 회원가입 페이지 : 아이디, 비밀번호, 이름, 생년월일, 전화번호, 질문 값 받기 및 유효성 검사
-+ 로그인 페이지 : 로그인 기능
-+ ID찾기 페이지 : 이름, 생년월일, 전화번호, 질문 답변을 통한 ID 나타냄
-+ PW찾기 페이지 : ID, 이름, 생년월일, 전화번호 답변을 통한 PW 나타냄
++ 로그인 페이지 : 로그인 기능, 아이디 찾기(이름, 생년월일, 전화번호, 질문 답변을 통한 ID 나타냄) , 비밀번호 찾기(ID, 이름, 생년월일, 전화번호 답변을 통한 PW 나타냄)
 + 메인 페이지 : 진행중인 공연 장르별, 추천 키워드별로 나타냄, 관람후기 노출
 + <b>서치 페이지 : 사용자가 검색한 내용이 포함된 공연 나타냄, 공연임박순/예매많은순으로 정렬, 장르 카테고리별 공연 띄우기</b>
 + <b>예매 페이지 : 선택한 공연에 맞는 관람일/시간/좌석 선택하여 예매하는 기능, 충전한 포인트를 사용하여 결제</b>
@@ -59,9 +56,31 @@
   
 
 ## 📎이미지
+![스크린샷 2024-09-04 143145](https://github.com/user-attachments/assets/85d7832c-e64c-4221-bb29-7eba1f10fa66)
+![스크린샷 2024-09-04 143200](https://github.com/user-attachments/assets/481e15d1-5fc6-4196-abc2-ee215feac1f0)
+![스크린샷 2024-09-04 143210](https://github.com/user-attachments/assets/ba9713a1-c23b-415a-96ba-7d8ed8aa8d33)
+![스크린샷 2024-09-04 143222](https://github.com/user-attachments/assets/aa19ed93-dd56-420b-893d-64d18ed1c7a4)
+![스크린샷 2024-09-04 143231](https://github.com/user-attachments/assets/c5aa66dc-3b55-4101-988a-b940d722ab50)
+![스크린샷 2024-09-04 143239](https://github.com/user-attachments/assets/b54bcc02-8544-43f0-a3a3-d0a3f0bbf6f2)
+![스크린샷 2024-09-04 143253](https://github.com/user-attachments/assets/83ec8bed-33cf-41a6-ac53-8dbd9c2e055f)
+![스크린샷 2024-09-04 143259](https://github.com/user-attachments/assets/932536eb-14ba-4e7c-bd70-3ba4d5a24edd)
+![스크린샷 2024-09-04 143307](https://github.com/user-attachments/assets/2a881e70-2591-4a46-bc65-0446eaadd37f)
+![스크린샷 2024-09-04 143315](https://github.com/user-attachments/assets/d21dd538-df92-4fc8-bfd5-18d501f1bf33)
+![스크린샷 2024-09-04 143322](https://github.com/user-attachments/assets/7ba964eb-e090-4e09-8700-ab5df71eee14)
+![스크린샷 2024-09-04 143330](https://github.com/user-attachments/assets/ca2f46af-bfb9-41dd-9736-ffe3293790e0)
+![스크린샷 2024-09-04 143337](https://github.com/user-attachments/assets/22d7c6ab-3901-465d-96e3-791cd50d7045)
+![스크린샷 2024-09-04 143345](https://github.com/user-attachments/assets/3cce2f35-2181-49fe-b513-ecfdac4b8695)
+![스크린샷 2024-09-04 143411](https://github.com/user-attachments/assets/3239f686-9704-4397-bd46-65a5f27f0758)
+![스크린샷 2024-09-04 143420](https://github.com/user-attachments/assets/8bbbdd69-2e72-4a14-a773-ae025a41f1ce)
+![스크린샷 2024-09-04 143426](https://github.com/user-attachments/assets/37c314ef-aa85-4c6e-9149-3de0ecb2e78d)
+![스크린샷 2024-09-04 143436](https://github.com/user-attachments/assets/9da0b5e8-975e-463a-bad8-0bddb508078b)
 
 
 
+
+
+## 📎PDF 파일
+[kh파크.pdf](https://github.com/user-attachments/files/16861301/kh.pdf)
 
 
 데이터 베이스 생성 및 테이블 생성 쿼리문
@@ -158,3 +177,19 @@ create table a_order (
     ao_user varchar(45) not null,
     primary key (ao_seqno)
 );
+
+insert 하는 데이터는 테스트에 위치해 있음.
+
+AdateDaoTest   >> insertAdate 실행
+
+ArticleDaoTest >> insertArticle 실행
+
+AtimeDaoTest   >> insertAtime 실행
+
+CateDaoTest    >> insertCate 실행
+
+KeywordDaoTest >> insertKeyword 실행
+
+SeatDaoTest    >> insertseat 실행
+
+감사합니다 !
